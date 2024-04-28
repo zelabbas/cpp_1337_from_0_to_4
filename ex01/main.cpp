@@ -6,12 +6,11 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 17:31:08 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/04/28 18:36:40 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/04/28 19:33:23 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "PhoneBook.hpp"
-
 
 void	ft_option()
 {
@@ -32,15 +31,17 @@ int main()
 		std::cout << "enter a command: ";
 		if (!std::getline(std::cin, command))
 			break ;
-		if (!command.compare("ADD"))
+		else if (!command.compare("ADD"))
 			obj.add();
-		if (!command.compare("SEARCH"))
+		else if (!command.compare("SEARCH"))
 			obj.search();
-		if (!command.compare("EXIT"))
+		else if (!command.compare("EXIT"))
 		{
 			std::cout << "exit" << std::endl;
 			exit(0);
 		}
+		else
+			std::cout << RED_COLOR <<"Command not valid." << RESET_COLOR << std::endl;
 	}
 	return (0);
 }
