@@ -6,11 +6,11 @@ RM = rm -rf
 
 COMPILE = c++ 
 
-SRCS = Contacat.cpp PhoneBook.cpp main.cpp
+SRCS = Contact.cpp PhoneBook.cpp main.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
-%.o : %.cpp PhoneBook.hpp Contacat.hpp
+%.o : %.cpp PhoneBook.hpp Contact.hpp
 	@${COMPILE} ${FLGAS} -c $< -o $@
 	@echo "compilation files src done 	✅"
 	@echo "create files objects done 	✅"
