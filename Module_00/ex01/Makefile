@@ -1,6 +1,6 @@
 NAME = phonebook
 
-FLGAS = -Wall -Wextra -Werror -std=c++98
+FLAGS = -Wall -Wextra -Werror -std=c++98
 
 RM = rm -rf
 
@@ -11,7 +11,7 @@ SRCS = Contact.cpp PhoneBook.cpp main.cpp
 OBJS = ${SRCS:.cpp=.o}
 
 %.o : %.cpp PhoneBook.hpp Contact.hpp
-	@${COMPILE} ${FLGAS} -c $< -o $@
+	@${COMPILE} ${FLAGS} -c $< -o $@
 	@echo "compilation files src done 	✅"
 	@echo "create files objects done 	✅"
 
