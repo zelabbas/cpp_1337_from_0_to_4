@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 17:31:08 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/04/28 19:33:23 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/04/30 15:32:29 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,11 +20,17 @@ void	ft_option()
     std::cout << std::setw(10) << std::left << "EXIT" << " - Exit the program.\n";
 }
 
-int main()
+int main(int ac, char **av)
 {
 	std::string	command;
 	PhoneBook	obj;
+	(void)av;
 
+	if (ac != 1)
+	{
+		std::cout << "Error Usage: The program don't accepte areguments." << std::endl;
+		return (0);
+	}
 	ft_option();
 	while (1)
 	{
