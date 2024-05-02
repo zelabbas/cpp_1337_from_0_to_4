@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 10:36:32 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/02 16:27:14 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/02 17:35:10 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int main(int ac, char **av)
 	}
 	obj.complain("INFO");
 	obj.complain("DEBUG");
-	obj.complain("WRANING");
+	obj.complain("WARNING");
 	obj.complain("ERROR");
 	obj.complain("NONE");
 }
