@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 13:57:36 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/02 15:56:29 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/02 17:35:24 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	Harl::error(void)
 void Harl::complain(std::string level) {
     void (Harl::*func)();
 	size_t	i;
-	std::string	levels[] = {"DEBUG", "INFO", "WRANING", "ERROR"};
+	std::string	levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
 	i = 0;
 	while (i < 4 && levels[i] != level)
