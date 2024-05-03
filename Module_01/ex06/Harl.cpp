@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 13:57:36 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/02 22:40:27 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/03 17:54:25 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void	Harl::error(void)
 }
 
 void Harl::complain(std::string level) {
-    void (Harl::*func)();
+    void (Harl::*func[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 	size_t	i;
 	std::string	levels[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 
@@ -62,17 +62,17 @@ void Harl::complain(std::string level) {
 	switch(i)
 	{
         case 0:
-            func = &Harl::debug;
-			(this->*func)();
+            func[0] = &Harl::debug;
+			(this->*func[0])();
         case 1:
-            func = &Harl::info;
-			(this->*func)();
+            func[1] = &Harl::info;
+			(this->*func[1])();
         case 2:
-            func = &Harl::warning;
-			(this->*func)();
+            func[2] = &Harl::warning;
+			(this->*func[2])();
         case 3:
-            func = &Harl::error;
-			(this->*func)();
+            func[3] = &Harl::error;
+			(this->*func[3])();
 			break ;
         default:
             std::cerr << "[ Probably complaining about insignificant problems ]" << std::endl;
