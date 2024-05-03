@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/02 13:57:36 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/02 17:35:24 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/03 10:27:52 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,7 +74,7 @@ void Harl::complain(std::string level) {
             func = &Harl::error;
             break;
         default:
-            std::cerr << RED_COLOR <<"Unknown complaint level: " << level << std::endl;
+            std::cerr << RED_COLOR <<"Unknown complaint level: " << level << RESET_COLOR << std::endl;
             return;
     }
     (this->*func)();
