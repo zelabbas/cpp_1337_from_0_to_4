@@ -6,7 +6,7 @@ RM = rm -rf
 
 COMPILE = c++ 
 
-SRCS = main.cpp Zombie.cpp  newZombie.cpp randomChump.cpp
+SRCS = main.cpp Zombie.cpp newZombie.cpp randomChump.cpp
 
 OBJS = ${SRCS:.cpp=.o}
 
