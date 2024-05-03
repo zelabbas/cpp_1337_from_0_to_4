@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 20:39:59 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/04/29 21:01:44 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/03 18:23:44 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,8 +34,5 @@ std::string	Zombie::getName(void)
 
 void	Zombie::announce(void)
 {
-	if (!this->name.compare("Foo"))
-		std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
-	else
-		std::cout << "<" << this->name << ">" << ": BraiiiiiiinnnzzzZ..." << std::endl;
+	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
