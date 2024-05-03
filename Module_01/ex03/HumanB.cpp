@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 16:03:47 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/03 17:12:16 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/03 20:40:48 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,10 +29,7 @@ void	HumanB::attack(void)
 		std::cout << this->name << " attacks with their " 
 			<< this->wp_B->getType() << std::endl;
 	else
-	{
-		std::cout << "there's no Weapon , creat first a Weapon and try again." << std::endl;
-		exit(1);
-	}
+		std::cout << this->name << " attacks with their " << "there's no Weapon." << std::endl;
 }
 
 void	HumanB::setWeapon(Weapon& weapon)
