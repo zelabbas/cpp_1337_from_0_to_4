@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 21:17:32 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/04/29 21:46:12 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/03 18:27:27 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ Zombie* zombieHorde(int N, std::string name)
 	Zombie *tab = new(std::nothrow) Zombie[N];
 	if (!tab)
 	{
-		std::cerr << "Failed to allocate memory for zombie horde" << std::endl;
+		std::cerr << "Failed to allocate memory for " << N << " zombie horde." << std::endl;
 		exit(1);
 	}
 	for (int i = 0; i < N; i++)
