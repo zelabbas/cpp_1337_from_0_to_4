@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 15:57:19 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/03 16:59:46 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/03 20:34:39 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int main(int ac, char **av)
 	std::string		str_toreplace;
 	std::string		str_replace;
 	std::string		line;
+	std::string		buffer;
 	std::ifstream 	file_read;
 	std::ofstream 	file_write;
 	
@@ -53,10 +54,11 @@ int main(int ac, char **av)
 	}
 	while (std::getline(file_read, line))
 	{
-		file_write << replace_string(line ,str_toreplace, str_replace);
+		buffer += line;
 		if (!file_read.eof())
-			file_write << "\n";
+			buffer += "\n";
 	}
+	file_write << replace_string(buffer, str_toreplace, str_replace);
 	file_read.close();
 	file_write.close();
 	std::cout << "Done ✅" << std::endl;
