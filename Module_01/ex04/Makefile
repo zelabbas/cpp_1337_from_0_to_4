@@ -4,12 +4,12 @@ FLAGS = -Wall -Wextra -Werror -std=c++98
 
 RM = rm -rf
 
-COMPILE = c++ 
+COMPILE = c++
 
-SRCS = main.cpp replace.cpp 
+SRCS = main.cpp replace.cpp
 OBJS = ${SRCS:.cpp=.o}
 
-%.o : %.cpp replace.hpp 
+%.o : %.cpp replace.hpp
 	@${COMPILE} ${FLAGS} -c $< -o $@
 	@echo "compilation file src done 	✅"
 	@echo "create file object done 	✅"
