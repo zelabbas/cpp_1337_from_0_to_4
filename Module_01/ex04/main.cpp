@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/01 15:57:19 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/02 10:29:57 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/03 16:59:46 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,9 @@ int main(int ac, char **av)
 	}
 	while (std::getline(file_read, line))
 	{
-		file_write << replace_string(line ,str_toreplace, str_replace) << std::endl;
+		file_write << replace_string(line ,str_toreplace, str_replace);
+		if (!file_read.eof())
+			file_write << "\n";
 	}
 	file_read.close();
 	file_write.close();
