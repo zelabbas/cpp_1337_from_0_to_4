@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 16:10:56 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/08 14:55:45 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/09 20:50:15 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ class Fixed
 {
 	private:
 		int fixed_point;
-		static const int fractional = 8;
+		static const int fractional;
 	public:
 		Fixed(void);
 		Fixed(const Fixed&);
