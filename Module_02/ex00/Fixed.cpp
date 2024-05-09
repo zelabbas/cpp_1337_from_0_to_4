@@ -6,11 +6,13 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 13:40:30 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/08 15:07:35 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/09 20:50:06 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+
+Fixed::fractional = 8;
 
 Fixed::Fixed(void)
 {
