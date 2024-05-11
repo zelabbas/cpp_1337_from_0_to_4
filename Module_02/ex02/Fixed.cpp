@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 13:40:30 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/10 12:26:41 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/11 11:51:17 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,70 +73,70 @@ std::ostream	&operator<< (std::ostream& os, const Fixed& obj)
 	return (os);
 }
 
-bool	operator>(const Fixed& obj_1, const Fixed& obj_2)
+bool	Fixed::operator>(const Fixed& obj)
 {
-	return	(obj_1.fixed_point > obj_2.fixed_point);
+	return	(this->fixed_point > obj.fixed_point);
 }
 
 
-bool	operator>=(const Fixed& obj_1, const Fixed& obj_2)
+bool	Fixed::operator>=(const Fixed& obj)
 {
-	return (obj_1.fixed_point >= obj_2.fixed_point);
+	return (this->fixed_point >= obj.fixed_point);
 }
 
-bool	operator<(const Fixed& obj_1, const Fixed& obj_2)
+bool	Fixed::operator<(const Fixed& obj)
 {
-	return (obj_1.fixed_point < obj_2.fixed_point);
+	return (this->fixed_point < obj.fixed_point);
 }
 
-bool	operator<=(const Fixed& obj_1, const Fixed& obj_2)
+bool	Fixed::operator<=(const Fixed& obj)
 {
-	return (obj_1.fixed_point < obj_2.fixed_point);
+	return (this->fixed_point < obj.fixed_point);
 }
 
-bool	operator==(const Fixed& obj_1, const Fixed& obj_2)
+bool	Fixed::operator==(const Fixed& obj)
 {
-	return (obj_1.fixed_point == obj_2.fixed_point);
+	return (this->fixed_point == obj.fixed_point);
 }
 
-bool	operator!=(const Fixed& obj_1, const Fixed& obj_2)
+bool	Fixed::operator!=(const Fixed& obj)
 {
-	return (obj_1.fixed_point != obj_2.fixed_point);
+	return (this->fixed_point != obj.fixed_point);
 }
 
-Fixed	operator+ (const Fixed& obj_1, const Fixed& obj_2)
+Fixed	Fixed::operator+ (const Fixed& obj)
 {
 	float	tmp;
 
-	tmp = obj_1.toFloat() + obj_2.toFloat();
+	tmp = this->toFloat() + obj.toFloat();
 	return (Fixed(tmp));
 }
 
-Fixed	operator- (const Fixed& obj_1, const Fixed& obj_2)
+Fixed	Fixed::operator- (const Fixed& obj)
 {
 	float	tmp;
 
-	tmp = obj_1.toFloat() - obj_2.toFloat();
+	tmp = this->toFloat() - obj.toFloat();
 	return (Fixed(tmp));
 }
 
-Fixed	operator* (const Fixed& obj_1, const Fixed& obj_2)
+Fixed	Fixed::operator* (const Fixed& obj)
 {
 	float	tmp;
 
-	tmp = obj_1.toFloat() * obj_2.toFloat();
+	tmp = this->toFloat() * obj.toFloat();
 	return (Fixed(tmp));
 }
 
-Fixed	operator/ (const Fixed& obj_1, const Fixed& obj_2)
+Fixed	Fixed::operator/ (const Fixed& obj)
 {
 	float	tmp;
-	if (!obj_2.toFloat())
+	if (!obj.toFloat())
 	{
 		std::cout << "Error:division by zero is undefined" << std::endl;
 		exit(-1);
 	}
-	tmp = obj_1.toFloat() / obj_2.toFloat();
+	tmp = this->toFloat() / obj.toFloat();
 	return (Fixed(tmp));
 }
 
@@ -177,7 +177,7 @@ Fixed&	Fixed::min(Fixed& obj_1, Fixed& obj_2)
 
 Fixed&	Fixed::min(const Fixed& obj_1, const Fixed& obj_2)
 {
-	return (obj_1 < obj_2) ? (Fixed& )obj_1 : (Fixed& )obj_2;
+	return ((Fixed)obj_1 < (Fixed)obj_2) ? (Fixed& )obj_1 : (Fixed& )obj_2;
 }
 
 Fixed&	Fixed::max(Fixed& obj_1, Fixed& obj_2)
@@ -187,5 +187,5 @@ Fixed&	Fixed::max(Fixed& obj_1, Fixed& obj_2)
 
 Fixed&	Fixed::max(const Fixed& obj_1, const Fixed& obj_2)
 {
-	return (obj_1 > obj_2) ? (Fixed& )obj_1 : (Fixed& )obj_2;
+	return ((Fixed)obj_1 > (Fixed)obj_2) ? (Fixed& )obj_1 : (Fixed& )obj_2;
 }
