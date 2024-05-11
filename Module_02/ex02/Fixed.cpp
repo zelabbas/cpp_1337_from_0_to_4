@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 13:40:30 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/11 11:51:17 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/11 12:13:07 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -169,6 +169,7 @@ Fixed	Fixed::operator--(int)
 	--this->fixed_point;
 	return (tmp);
 }
+
 
 Fixed&	Fixed::min(Fixed& obj_1, Fixed& obj_2)
 {
