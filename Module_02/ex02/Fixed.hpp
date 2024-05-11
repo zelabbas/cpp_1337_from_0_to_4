@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 16:10:56 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/10 12:26:44 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/11 11:38:31 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,16 @@ class Fixed
 		Fixed operator++(int);
 		Fixed& operator--(void);
 		Fixed operator--(int);
-		friend bool operator > (const Fixed&, const Fixed&);
-		friend bool operator < (const Fixed&, const Fixed&);
-		friend bool operator >= (const Fixed&, const Fixed&);
-		friend bool operator <= (const Fixed&, const Fixed&);
-		friend bool operator == (const Fixed&, const Fixed&);
-		friend bool operator != (const Fixed&, const Fixed&);
-		friend Fixed operator + (const Fixed&, const Fixed&);
-		friend Fixed operator - (const Fixed&, const Fixed&);
-		friend Fixed operator * (const Fixed&, const Fixed&);
-		friend Fixed operator / (const Fixed&, const Fixed&);
+		bool operator > (const Fixed&);
+		bool operator < (const Fixed&);
+		bool operator >= (const Fixed&);
+		bool operator <= (const Fixed&);
+		bool operator == (const Fixed&);
+		bool operator != (const Fixed&);
+		Fixed operator + (const Fixed&);
+		Fixed operator - (const Fixed&);
+		Fixed operator * (const Fixed&);
+		Fixed operator / (const Fixed&);
 
 		static Fixed& min(Fixed&, Fixed&);
 		static Fixed& min(const Fixed&, const Fixed&);
