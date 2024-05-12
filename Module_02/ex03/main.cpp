@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 12:37:14 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/12 16:39:56 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/12 18:52:07 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int main() {
 
     std::cout << "Test Case 2: " << (result2 ? "Inside" : "Outside") << std::endl;
 
-    std::cout << "Test Case 3: " << (result3 ? "Inside" : "Outside") << std::endl; 
+    std::cout << "Test Case 3: " << (result3 ? "Inside" : "Outside") << std::endl;
 
     std::cout << "Test Case 4: " << (result4 ? "Inside" : "Outside") << std::endl;
 

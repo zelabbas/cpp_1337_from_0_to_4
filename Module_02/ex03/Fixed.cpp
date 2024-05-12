@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 12:36:47 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/12 16:14:26 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/12 18:50:33 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -177,7 +177,7 @@ Fixed&	Fixed::min(Fixed& obj_1, Fixed& obj_2)
 
 Fixed&	Fixed::min(const Fixed& obj_1, const Fixed& obj_2)
 {
-	return ((Fixed)obj_1 < (Fixed)obj_2) ? (Fixed& )obj_1 : (Fixed& )obj_2;
+	return (obj_1 < obj_2) ? (Fixed& )obj_1 : (Fixed& )obj_2;
 }
 
 Fixed&	Fixed::max(Fixed& obj_1, Fixed& obj_2)
@@ -187,5 +187,5 @@ Fixed&	Fixed::max(Fixed& obj_1, Fixed& obj_2)
 
 Fixed&	Fixed::max(const Fixed& obj_1, const Fixed& obj_2)
 {
-	return ((Fixed)obj_1 > (Fixed)obj_2) ? (Fixed& )obj_1 : (Fixed& )obj_2;
+	return (obj_1 > obj_2) ? (Fixed& )obj_1 : (Fixed& )obj_2;
 }
