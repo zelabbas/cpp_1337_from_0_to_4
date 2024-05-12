@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/10 12:36:47 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/12 18:50:33 by zelabbas         ###   ########.fr       */
+/*   Created: 2024/05/06 13:40:30 by zelabbas          #+#    #+#             */
+/*   Updated: 2024/05/12 21:04:46 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ bool	Fixed::operator<(const Fixed& obj) const
 
 bool	Fixed::operator<=(const Fixed& obj) const
 {
-	return (this->fixed_point < obj.fixed_point);
+	return (this->fixed_point <= obj.fixed_point);
 }
 
 bool	Fixed::operator==(const Fixed& obj) const
@@ -108,24 +108,24 @@ Fixed	Fixed::operator+ (const Fixed& obj) const
 {
 	float	tmp;
 
-	tmp = this->toFloat() + obj.toFloat();
-	return (Fixed(tmp));
+	tmp = this->fixed_point + obj.fixed_point;
+	return (Fixed(tmp / 256));
 }
 
 Fixed	Fixed::operator- (const Fixed& obj) const
 {
 	float	tmp;
 
-	tmp = this->toFloat() - obj.toFloat();
-	return (Fixed(tmp));
+	tmp = this->fixed_point - obj.fixed_point;
+	return (Fixed(tmp / 256));
 }
 
 Fixed	Fixed::operator* (const Fixed& obj) const
 {
 	float	tmp;
 
-	tmp = this->toFloat() * obj.toFloat();
-	return (Fixed(tmp));
+	tmp = (this->fixed_point * obj.fixed_point) / 256;
+	return (Fixed(tmp / 256));
 }
 
 Fixed	Fixed::operator/ (const Fixed& obj) const
@@ -136,7 +136,7 @@ Fixed	Fixed::operator/ (const Fixed& obj) const
 		std::cout << "Error:division by zero is undefined" << std::endl;
 		exit(-1);
 	}
-	tmp = this->toFloat() / obj.toFloat();
+	tmp = (float)this->fixed_point / obj.fixed_point;
 	return (Fixed(tmp));
 }
 
@@ -170,6 +170,7 @@ Fixed	Fixed::operator--(int)
 	return (tmp);
 }
 
+
 Fixed&	Fixed::min(Fixed& obj_1, Fixed& obj_2)
 {
 	return (obj_1 < obj_2) ? obj_1 : obj_2;
@@ -177,7 +178,7 @@ Fixed&	Fixed::min(Fixed& obj_1, Fixed& obj_2)
 
 Fixed&	Fixed::min(const Fixed& obj_1, const Fixed& obj_2)
 {
-	return (obj_1 < obj_2) ? (Fixed& )obj_1 : (Fixed& )obj_2;
+	return ((obj_1 < obj_2) ? (Fixed& )obj_1 : (Fixed& )obj_2);
 }
 
 Fixed&	Fixed::max(Fixed& obj_1, Fixed& obj_2)
