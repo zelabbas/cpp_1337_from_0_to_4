@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 13:40:30 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/12 16:04:25 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/12 21:04:46 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,24 +108,24 @@ Fixed	Fixed::operator+ (const Fixed& obj) const
 {
 	float	tmp;
 
-	tmp = this->toFloat() + obj.toFloat();
-	return (Fixed(tmp));
+	tmp = this->fixed_point + obj.fixed_point;
+	return (Fixed(tmp / 256));
 }
 
 Fixed	Fixed::operator- (const Fixed& obj) const
 {
 	float	tmp;
 
-	tmp = this->toFloat() - obj.toFloat();
-	return (Fixed(tmp));
+	tmp = this->fixed_point - obj.fixed_point;
+	return (Fixed(tmp / 256));
 }
 
 Fixed	Fixed::operator* (const Fixed& obj) const
 {
 	float	tmp;
 
-	tmp = this->toFloat() * obj.toFloat();
-	return (Fixed(tmp));
+	tmp = (this->fixed_point * obj.fixed_point) / 256;
+	return (Fixed(tmp / 256));
 }
 
 Fixed	Fixed::operator/ (const Fixed& obj) const
@@ -136,7 +136,7 @@ Fixed	Fixed::operator/ (const Fixed& obj) const
 		std::cout << "Error:division by zero is undefined" << std::endl;
 		exit(-1);
 	}
-	tmp = this->toFloat() / obj.toFloat();
+	tmp = (float)this->fixed_point / obj.fixed_point;
 	return (Fixed(tmp));
 }
 
