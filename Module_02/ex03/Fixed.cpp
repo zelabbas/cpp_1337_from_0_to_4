@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 13:40:30 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/12 21:04:46 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/13 11:59:11 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,7 @@ Fixed::Fixed(const float floatpoint)
 
 Fixed::Fixed(const Fixed& obj)
 {
-	if (this != &obj)
-		this->fixed_point = obj.fixed_point;
+	*this = obj;
 }
 
 Fixed::~Fixed(void)
