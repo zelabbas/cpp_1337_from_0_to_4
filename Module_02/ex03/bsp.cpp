@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/10 12:39:22 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/11 16:11:14 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/13 17:39:34 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,14 @@
 float	calculate_surface(Point const a, Point const b, Point const c)
 {
 	float res;
-	res = ((a.get_x().toFloat()*(b.get_y().toFloat() - c.get_y().toFloat())) +
-		(b.get_x().toFloat() * (c.get_y().toFloat() - a.get_y().toFloat())) +
-		(c.get_x().toFloat()*(a.get_y().toFloat() - b.get_y().toFloat())));
+	Fixed r;
+	r = a.get_x() * (b.get_y() - c.get_y()) +
+		  b.get_x() * (c.get_y() - a.get_y()) +
+		  c.get_x() * (a.get_y() - b.get_y());
+	// res = ((a.get_x().toFloat()*(b.get_y().toFloat() - c.get_y().toFloat())) +
+	// 	(b.get_x().toFloat() * (c.get_y().toFloat() - a.get_y().toFloat())) +
+	// 	(c.get_x().toFloat()*(a.get_y().toFloat() - b.get_y().toFloat())));
+	res = r.toFloat();
 	if (res < 0)
 		return (-(res / 2));
 	return (res / 2);
