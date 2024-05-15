@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/14 10:49:21 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/15 10:17:02 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/15 11:03:16 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,8 @@ int main(int ac, char **av)
 	ScavTrap a("zak");
 	ScavTrap b;
 	b = a;
-	a.setHitPoints(700);
+	a.attack("youyou");
+	a.takeDamage(120);
 	a.attack("saim");
 	b.takeDamage(400);
 	b.attack("test");
