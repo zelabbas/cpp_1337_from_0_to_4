@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 12:27:49 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/15 10:21:40 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/15 20:37:15 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,7 @@ void	ClapTrap::beRepaired(unsigned int amount)
 }
 
 
-void	ClapTrap::setName(std::string& name)
+void	ClapTrap::setName(const std::string& name)
 {
 	this->name = name;
 }
