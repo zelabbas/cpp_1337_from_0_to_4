@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 12:03:50 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/14 16:55:00 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/15 10:51:35 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 class ClapTrap
 {
-	private:
+	protected:
 		std::string name;
 		int			hit_points;
 		int			energy_points;
