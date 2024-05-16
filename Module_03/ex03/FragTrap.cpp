@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 11:06:25 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/16 13:31:38 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/16 15:24:22 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,6 @@ FragTrap::FragTrap(const FragTrap& copy_obj)
 
 FragTrap::~FragTrap(void)
 {
-	std::cout << this->name << std::endl;
 	std::cout << "FragTrap Destructor called" << std::endl;
 }
 
