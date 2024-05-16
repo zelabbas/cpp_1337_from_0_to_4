@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 11:42:04 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/16 14:46:45 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/16 15:20:24 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,17 @@ DiamondTrap::DiamondTrap(void)
 {
 	std::cout << "Default DiamondTrap constructor  called" << std::endl;
 	this->name = "Default_clap_name";
-	this->hit_points = FragTrap::hit_points;
-	this->energy_points = ScavTrap::energy_points;
-	this->attack_damage = FragTrap::attack_damage;
+	this->hit_points = 100; // From FragTrap
+    this->energy_points = 50; // From ScavTrap
+    this->attack_damage = 20; // From FragTrap
 }
 
 DiamondTrap::DiamondTrap(const std::string& name) : ClapTrap(name + "_clap_trap"), name(name)
 {
 	std::cout << "Default DiamondTrap constructor by name called" << std::endl;
-    hit_points = FragTrap::hit_points; // From FragTrap
-    energy_points = ScavTrap::energy_points; // From ScavTrap
-    attack_damage = FragTrap::attack_damage; // From FragTrap
+    this->hit_points = 100; // From FragTrap
+    this->energy_points = 50; // From ScavTrap
+    this->attack_damage = 20; // From FragTrap
 }
 
 DiamondTrap::DiamondTrap(const DiamondTrap& obj)
