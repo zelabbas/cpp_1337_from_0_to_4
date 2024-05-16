@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/13 12:27:49 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/15 20:39:26 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/16 12:44:25 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -115,22 +115,22 @@ void	ClapTrap::setAttackDamage(unsigned int attackdamage)
 	this->attack_damage = attackdamage;
 }
 
-const std::string& ClapTrap::getName(void)
+const std::string& ClapTrap::getName(void) const
 {
 	return (this->name);
 }
 
-int	ClapTrap::getHitPoints(void)
+int	ClapTrap::getHitPoints(void) const
 {
 	return (this->hit_points);
 }
 
-int ClapTrap::getEnergyPoints(void)
+int ClapTrap::getEnergyPoints(void) const
 {
 	return (this->energy_points);
 }
 
-int ClapTrap::getAttackDamage(void)
+int ClapTrap::getAttackDamage(void) const
 {
 	return (this->attack_damage);
 }
