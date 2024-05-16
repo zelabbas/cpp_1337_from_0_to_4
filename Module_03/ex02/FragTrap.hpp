@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/15 11:06:20 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/15 11:26:22 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/16 13:19:35 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class FragTrap : public ClapTrap
 		
 		FragTrap& operator=(const FragTrap&);
 		void attack(const std::string& target);
-		void highFivesGuys(void);
+		void highFivesGuys(void) const;
 };
 
 #endif
