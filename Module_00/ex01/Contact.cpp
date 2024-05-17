@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 17:31:02 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/04/28 21:29:13 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/17 20:18:54 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,37 +53,37 @@ void	Contact::setIndex(int i)
 }
 
 //getters 
-std::string Contact::getFirstName()
+std::string Contact::getFirstName() const
 {
 	return (this->firstname);
 }
 
-std::string Contact::getLastName()
+std::string Contact::getLastName() const
 {
 	return (this->lastname);
 }
 
-std::string Contact::getNickName()
+std::string Contact::getNickName() const
 {
 	return (this->nickname);
 }
 
-std::string Contact::getPhoneNumber()
+std::string Contact::getPhoneNumber() const
 {
 	return (this->phone_number);
 }
 
-std::string Contact::getDarkSecret()
+std::string Contact::getDarkSecret() const
 {
 	return (this->darkest_secret);
 }
 
-int	Contact::getIndex()
+int	Contact::getIndex() const
 {
 	return (this->index);
 }
 
-std::string Contact::truncateString(const std::string& str, size_t maxLength)
+std::string Contact::truncateString(const std::string& str, size_t maxLength) const
 {
     if (str.length() > maxLength)
 	{
@@ -93,7 +93,7 @@ std::string Contact::truncateString(const std::string& str, size_t maxLength)
         return str;
 }
 
-int	Contact::print_contact()
+int	Contact::print_contact() const
 {
 	if (!this->firstname.empty())
 	{

@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/27 17:31:05 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/04/29 16:21:48 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/17 20:19:05 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,25 +31,25 @@ class Contact
 					~Contact();
 		
 		void		setFirstName(std::string);
-		std::string	getFirstName();
+		std::string	getFirstName() const;
 	
 		void		setLastName(std::string);
-		std::string	getLastName();
+		std::string	getLastName() const;
 
 		void		setNickName(std::string);
-		std::string	getNickName();
+		std::string	getNickName() const;
 	
 		void		setPhoneNumber(std::string);
-		std::string	getPhoneNumber();
+		std::string	getPhoneNumber() const;
 	
 		void		setDarkestSecret(std::string);
-		std::string	getDarkSecret();
+		std::string	getDarkSecret() const;
 	
 		void		setIndex(int);
-		int			getIndex();
+		int			getIndex() const;
 		
-		int			print_contact();
-		std::string truncateString(const std::string&, size_t);
+		int			print_contact() const;
+		std::string truncateString(const std::string&, size_t) const;
 };
 
 #endif
