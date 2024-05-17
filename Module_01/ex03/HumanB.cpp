@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 16:03:47 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/03 20:40:48 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/17 20:26:39 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ HumanB::~HumanB()
 
 }
 
-void	HumanB::attack(void)
+void	HumanB::attack(void) const
 {
 	if (this->wp_B)
 		std::cout << this->name << " attacks with their " 
@@ -37,7 +37,7 @@ void	HumanB::setWeapon(Weapon& weapon)
 	this->wp_B = &weapon;
 }
 
-Weapon& HumanB::getWeapon(void)
+Weapon& HumanB::getWeapon(void) const
 {
 	return (*this->wp_B);
 }
@@ -47,7 +47,7 @@ void	HumanB::setName(std::string name)
 	this->name = name;
 }
 
-std::string	HumanB::getName(void)
+std::string	HumanB::getName(void) const
 {
 	return (this->name);
 }

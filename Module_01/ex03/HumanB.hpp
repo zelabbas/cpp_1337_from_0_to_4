@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 16:03:51 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/01 15:11:24 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/17 20:26:17 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ class HumanB
 	public:
 					HumanB(std::string);
 					~HumanB();
-		void		attack(void);
+		void		attack(void) const;
 		
 		void		setWeapon(Weapon&);
-		Weapon&		getWeapon(void);
+		Weapon&		getWeapon(void) const;
 		
 		void		setName(std::string);
-		std::string	getName(void);
+		std::string	getName(void) const;
 };
 
 
