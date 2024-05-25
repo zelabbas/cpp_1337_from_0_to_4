@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 15:26:41 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/25 21:26:55 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/25 21:50:58 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,6 @@ Cat::Cat(void)
 		exit(-1);
 	}
 	this->type = "Cat";
-}
-
-Cat::Cat(const std::string& type) : Animal(type)
-{
-	std::cout << "Default Cat constructor by name called" << std::endl;
 }
 
 Cat::Cat(const Cat& obj)

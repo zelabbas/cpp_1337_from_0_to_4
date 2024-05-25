@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 14:57:13 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/19 11:26:18 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/25 21:51:11 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ class Dog : public Animal
 		Brain* brain;
 	public:
 		Dog(void);
-		Dog(const std::string&);
 		Dog(const Dog&);
 		~Dog();
 		

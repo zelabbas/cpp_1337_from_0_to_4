@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 15:04:45 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/25 21:28:43 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/25 21:51:06 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,6 @@ Dog::Dog(void)
 		exit(-1);
 	}
 	this->type = "Dog";
-}
-
-Dog::Dog(const std::string& type) : Animal(type)
-{
-	std::cout << "Default Dog constructor by name called" << std::endl;
 }
 
 Dog::Dog(const Dog& obj)
