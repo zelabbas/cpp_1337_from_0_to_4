@@ -1,7 +1,21 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   learn.cpp                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/05/25 22:34:28 by zelabbas          #+#    #+#             */
+/*   Updated: 2024/05/25 22:34:31 by zelabbas         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <iostream>
 
 class A
 {
+	private:
+		std::string name;
     public:
     A(){ std::cout << "ola A\n";}
     static void display()
@@ -18,13 +32,13 @@ class A
     }
 };
 
-class B :  public A
+class B : virtual  public A
 {
     public:
     B(){ std::cout << "ola b\n";};
 };
 
-class C :  public A
+class C : virtual  public A
 {
     public:
     C(){ std::cout << "ola c\n";};
