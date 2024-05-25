@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 14:57:13 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/18 18:16:54 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/25 22:27:42 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ class Dog : public Animal
 		/* date */
 	public:
 		Dog(void);
-		Dog(const std::string&);
 		Dog(const Dog&);
 		~Dog();
 		

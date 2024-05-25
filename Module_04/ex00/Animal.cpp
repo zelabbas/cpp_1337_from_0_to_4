@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 14:24:52 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/18 15:38:48 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/25 22:27:10 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,6 @@ Animal::Animal(void)
 Animal::~Animal(void)
 {
 	std::cout << "Animal Destructor called" << std::endl;
-}
-
-Animal::Animal(const std::string& type)
-{
-	std::cout << "Default Animal constructor by name called" << std::endl;
-	this->type = type;
 }
 
 Animal::Animal(const Animal& obj)

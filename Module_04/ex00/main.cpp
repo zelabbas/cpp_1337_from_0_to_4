@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 15:36:08 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/19 15:42:26 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/25 22:29:03 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 int main()
 {
 	const Animal* meta = new Animal();
-	const Animal* j = new Dog("test");
+	const Animal* j = new Dog();
 	const Animal* i = new Cat();
 	std::cout << j->getType() << " " << std::endl;
 	std::cout << i->getType() << " " << std::endl;
