@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 15:26:41 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/21 14:43:59 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/25 17:13:03 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ Cat& Cat::operator=(const Cat& obj)
 	if (this != &obj)
 	{
 		Animal::operator=(obj);
-		this->brain = obj.brain;
+		*this->brain = *obj.brain;
 	}
 	return (*this);
 }

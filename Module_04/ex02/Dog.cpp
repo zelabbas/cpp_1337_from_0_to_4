@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 15:04:45 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/19 12:15:27 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/25 17:16:36 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ Dog&	Dog::operator=(const Dog& obj)
 	if (this != &obj)
 	{
 		Animal::operator= (obj);
-		this->brain = obj.brain;
+		*this->brain = *obj.brain;
 	}
 	return (*this);
 }

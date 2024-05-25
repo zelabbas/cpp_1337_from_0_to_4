@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 15:36:08 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/21 14:43:50 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/25 18:06:09 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,11 @@ int main()
 	std::cout << std::endl;
 	j->makeSound();
 	i->makeSound();
+	d->makeSound();
 	std::cout << std::endl;
 	delete j;
 	delete i;
+	delete d;
 	std::cout << std::endl;
 
 	Animal* tab[4];

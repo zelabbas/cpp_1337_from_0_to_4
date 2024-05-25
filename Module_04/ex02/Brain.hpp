@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 21:41:26 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/18 21:47:05 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/25 16:52:12 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,9 @@
 class Brain
 {
 	private:
-		std::string ideas[100];
+		/* data*/
 	public:
+		std::string ideas[100];
 		Brain(void);
 		~Brain(void);
 		Brain(const Brain&);

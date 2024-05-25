@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 21:48:11 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/19 12:16:34 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/25 17:13:35 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,9 @@ Brain&	Brain::operator=(const Brain& obj)
 	if (this != &obj)
 	{
 		for (size_t i = 0; i < 100; i++)
+		{
 			this->ideas[i] = obj.ideas[i];
+		}
 	}
 	return (*this);
 }
