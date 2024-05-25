@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 18:20:14 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/18 20:11:46 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/25 22:32:15 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ class WrongAnimal
 	public:
 		WrongAnimal(void);
 		WrongAnimal(const WrongAnimal&);
-		WrongAnimal(const std::string&);
 		virtual ~WrongAnimal(void);
 		WrongAnimal& operator= (const WrongAnimal&);
 

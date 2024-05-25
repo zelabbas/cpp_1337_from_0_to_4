@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 18:20:11 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/18 20:15:14 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/25 22:32:09 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,6 @@ WrongAnimal::WrongAnimal(void)
 WrongAnimal::~WrongAnimal(void)
 {
 	std::cout << "WrongAnimal Destructor called" << std::endl;
-}
-
-WrongAnimal::WrongAnimal(const std::string& type)
-{
-	std::cout << "Default WrongAnimal constructor by name called" << std::endl;
-	this->type = type;
 }
 
 WrongAnimal::WrongAnimal(const WrongAnimal& obj)
