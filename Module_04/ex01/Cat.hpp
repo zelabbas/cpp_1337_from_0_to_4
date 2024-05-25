@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 15:20:16 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/19 11:26:46 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/25 21:53:06 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@ class Cat : public Animal
 		Brain* brain;
 	public:
 		Cat(void);
-		Cat(const std::string&);
 		Cat(const Cat&);
 		~Cat();
 		
