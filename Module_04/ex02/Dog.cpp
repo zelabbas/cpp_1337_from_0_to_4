@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 15:04:45 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/25 17:16:36 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/25 21:28:43 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ Dog::Dog(const std::string& type) : Animal(type)
 Dog::Dog(const Dog& obj)
 {
 	std::cout << "copy Dog constructor called" << std::endl;
+	this->brain = NULL;
 	*this = obj;
 }
 
@@ -47,7 +48,17 @@ Dog&	Dog::operator=(const Dog& obj)
 	if (this != &obj)
 	{
 		Animal::operator= (obj);
-		*this->brain = *obj.brain;
+		if (this->brain)
+			*this->brain = *obj.brain;
+		else
+		{
+			this->brain = new(std::nothrow) Brain(*obj.brain);
+			if (!this->brain)
+			{
+				std::cout << "faild to allocate memory" << std::endl;
+				exit(-1);
+			}
+		}
 	}
 	return (*this);
 }
