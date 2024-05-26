@@ -6,7 +6,7 @@
 /*   By: zelabbas <zelabbas@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/18 12:49:56 by zelabbas          #+#    #+#             */
-/*   Updated: 2024/05/21 14:21:06 by zelabbas         ###   ########.fr       */
+/*   Updated: 2024/05/26 12:36:08 by zelabbas         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,6 @@ class Animal
 	public:
 		Animal(void);
 		Animal(const Animal&);
-		Animal(const std::string&);
 		virtual ~Animal(void);
 		Animal& operator= (const Animal&);
 
