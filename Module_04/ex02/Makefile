@@ -25,7 +25,7 @@ ${NAME} : ${OBJS}
 
 clean :
 	@${RM} ${OBJS} && \
-	echo "Deleted object files ✅" || \
+	echo "Deleted object files ${OBJS} ✅" || \
 	echo "Failed to delete object files ❌"
 
 fclean : clean
