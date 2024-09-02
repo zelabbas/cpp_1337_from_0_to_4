@@ -18,7 +18,7 @@ void MateriaSource::clearMaterias(void)
     for (int i = 0; i < this->counter; ++i)
 	{
         delete materias[i];
-        materias[i] = nullptr;
+        materias[i] = NULL;
     }
 }
 
@@ -26,10 +26,10 @@ void MateriaSource::copyMaterias(const MateriaSource& other)
 {
     for (int i = 0; i < 4; ++i)
 	{
-        if (other.materias[i] != nullptr)
+        if (other.materias[i] != NULL)
             materias[i] = other.materias[i]->clone();
 		else
-            materias[i] = nullptr;
+            materias[i] = NULL;
     }
 }
 
@@ -38,7 +38,7 @@ MateriaSource::MateriaSource(void)
 	this->counter = 0;
 	for (size_t i = 0; i < 4; i++)
 	{
-		this->materias[i] = nullptr;
+		this->materias[i] = NULL;
 	}
 }
 
@@ -51,7 +51,7 @@ MateriaSource::~MateriaSource(void)
 {
 	for (size_t i = 0; i < 4; i++)
 	{
-		if (this->materias[i] != nullptr)
+		if (this->materias[i] != NULL)
 			delete this->materias[i];
 	}
 }
@@ -60,8 +60,8 @@ MateriaSource& MateriaSource::operator= (const MateriaSource& obj)
 {
 	if (this != &obj)
 	{
-		this->counter = obj.counter;
 		clearMaterias();
+		this->counter = obj.counter;
 		copyMaterias(obj);
 	}
 	return (*this);
