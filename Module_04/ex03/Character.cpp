@@ -17,7 +17,7 @@ void Character::clearInventory(void)
     for (int i = 0; i < this->counter; ++i)
 	{
         delete inventory[i];
-        inventory[i] = nullptr;
+        inventory[i] = NULL;
     }
 }
 
@@ -25,10 +25,10 @@ void Character::copyInventory(const Character& other)
 {
     for (int i = 0; i < 4; ++i)
 	{
-        if (other.inventory[i] != nullptr)
+        if (other.inventory[i] != NULL)
             inventory[i] = other.inventory[i]->clone();
 		else
-            inventory[i] = nullptr;
+            inventory[i] = NULL;
     }
 }
 
@@ -38,7 +38,7 @@ Character::Character(void)
 	this->counter = 0;
 	for (size_t i = 0; i < 4; i++)
 	{
-		this->inventory[i] = nullptr;
+		this->inventory[i] = NULL;
 	}
 }
 
@@ -46,7 +46,7 @@ Character::Character(const std::string& name) : name(name) , counter(0)
 {
 	for (size_t i = 0; i < 4; i++)
 	{
-		this->inventory[i] = nullptr;
+		this->inventory[i] = NULL;
 	}
 }
 
@@ -65,9 +65,9 @@ Character& Character::operator= (const Character& obj)
 	if (this != &obj)
 	{
 		this->name = obj.name;
-		this->counter = obj.counter;
 		clearInventory();
 		copyInventory(obj);
+		this->counter = obj.counter;
 	}
 	return (*this);
 }
